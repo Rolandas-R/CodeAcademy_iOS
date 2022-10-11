@@ -200,3 +200,20 @@ import UIKit
 //narioMokestis(hours: 2, isMember: false, memberHourlyRate: 10, nonMemberHourlyRate: 20, memberTax: 0.20, nonMemberTax: 0.5)
 
 
+var penkiElementai = [5, 7, 25, 32, 55]
+
+print("pradinis elementu kiekis \(penkiElementai.count)")
+
+penkiElementai.removeAll()
+
+if penkiElementai.isEmpty {
+    penkiElementai.append(contentsOf: [22, 28, 30])
+}
+ print("antra salyga \(penkiElementai)")
+
+penkiElementai.remove(at: 1)
+print("trecia salyga \(penkiElementai)")
+
+penkiElementai.insert(16, at: 1)
+print("ketvirta salyga \(penkiElementai)")
+
