@@ -97,21 +97,106 @@ import UIKit
 //
 //profit(savikaina: 50, pardavimoKaina: 88)
 
-// OK
-func ugis(asmensUgis: Int) -> String {
-    if asmensUgis >= 195 {
-        return "labai aukstas zmogus"
-    }
-    if asmensUgis < 195 && asmensUgis >= 180 {
-        return "aukstas zmogus"
-    }
-    if asmensUgis < 180  && asmensUgis >= 165 {
-        return "vidutinio ugio zmogus"
-    }
-    if asmensUgis < 160 && asmensUgis > 140 {
-        return "zemas zmogus"
-    }
-    return "labai zemas zmogus"
-}
 
-ugis(asmensUgis: 158)
+// OK
+//(daugmaz- nebuvo butina rasyti antra ifa uzteko
+// if ugis>195{
+// return "..."
+//}
+//if ugis>175{
+//return"....}
+//.....
+
+//
+//func ugis(asmensUgis: Int) -> String {
+//    if asmensUgis >= 195 {
+//        return "labai aukstas zmogus"
+//    }
+//    if asmensUgis < 195 && asmensUgis >= 180 {
+//        return "aukstas zmogus"
+//    }
+//    if asmensUgis < 180  && asmensUgis >= 165 {
+//        return "vidutinio ugio zmogus"
+//    }
+//    if asmensUgis < 160 && asmensUgis > 140 {
+//        return "zemas zmogus"
+//    }
+//    return "labai zemas zmogus"
+//}
+//
+//print(ugis(asmensUgis: 197))
+
+//OK
+//func pasisveikinimas() {
+//    print("Hello CodeAcademy")
+//}
+//pasisveikinimas()
+//
+//
+//
+//func skaiciai(skaicius: Int) {
+//    if skaicius.% 2 == 0{
+//        print("skaicius lyginis")
+//    } else {
+//        print("skaicius nelyginis")
+//    }
+//}
+//skaiciai(skaicius: 21)
+
+//OK
+//let vardas = "Petras"
+//var diena = "Pirmadienis"
+//
+//func sveikinimas() {
+//    print("Sveikas \(vardas)")
+//    dienos()
+//}
+//func dienos() {
+//    print("siandien yra \(diena)")
+//}
+//sveikinimas()
+//sveikinimas()
+
+
+
+//OK
+//var pradinisSkaicius = 0
+//
+//func skaiciausDidinimas() {
+//    pradinisSkaicius += 1
+//    if pradinisSkaicius < 10 {
+//        skaiciausDidinimas()
+//    }
+//
+//}
+//skaiciausDidinimas()
+//print(pradinisSkaicius)
+
+
+
+//kitas variantas su rekursija OK
+//func neSavanoris(_ skaicius: Int) -> Int {
+//    var num = skaicius
+//    num += 1
+//    if num < 10 {
+//        return neSavanoris(num)
+//    }
+//        return num
+//}
+//print(neSavanoris(1))
+
+
+// OK
+//func narioMokestis(hours: Double, isMember: Bool, memberHourlyRate: Double, nonMemberHourlyRate: Double, memberTax: Double, nonMemberTax: Double) {
+//
+//    if isMember {
+//        let nariuiMoketi = hours * memberHourlyRate * memberTax
+//        print("Narys moka \(nariuiMoketi)")
+//    } else {
+//        let nenarysMoka = hours * nonMemberHourlyRate * nonMemberTax
+//        print("Ne narys moka daugiau: \(nenarysMoka)")
+//    }
+//}
+//narioMokestis(hours: 2, isMember: false, memberHourlyRate: 10, nonMemberHourlyRate: 20, memberTax: 0.20, nonMemberTax: 0.5)
+
+
