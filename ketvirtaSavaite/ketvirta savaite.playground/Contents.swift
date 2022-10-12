@@ -199,9 +199,9 @@ import UIKit
 //}
 //narioMokestis(hours: 2, isMember: false, memberHourlyRate: 10, nonMemberHourlyRate: 20, memberTax: 0.20, nonMemberTax: 0.5)
 
-
+/* TIKRAI OK, pats dariau
+ 
 var penkiElementai = [5, 7, 25, 32, 55]
-
 print("pradinis elementu kiekis \(penkiElementai.count)")
 
 penkiElementai.removeAll()
@@ -216,4 +216,62 @@ print("trecia salyga \(penkiElementai)")
 
 penkiElementai.insert(16, at: 1)
 print("ketvirta salyga \(penkiElementai)")
+ */
+
+
+/* OK
+ 
+ var miestai = ["Kaunas", "Vilnius", "NYC", "London", "Rome" ]
+
+miestai.reverse()
+print(miestai)
+
+print(miestai.first!)
+print(miestai.last!)
+
+let sortedMiestai = miestai.sorted { (firstValue, secondValue) in
+    firstValue.count > secondValue.count
+}
+print(sortedMiestai)
+
+let sortedMiestaiAntras = miestai.sorted { $0.count <= $1.count }
+print(sortedMiestaiAntras)
+
+
+//func sort(firstValue: String, secondValue: String) -> Bool {
+//    return true
+//}
+*/
+
+
+/* OK, ne mno daryta
+var dubliai: [Double] = [5, 7, 9, 10, 8]
+
+let dubliuVidurkis: Double = dubliai.reduce(0, +) / Double(dubliai.count)
+print(dubliuVidurkis)
+
+print("min \(dubliai.min()!), max: \(dubliai.max()!)")
+print("First > 8: \(dubliai.first(where: {$0 > 8})!)")
+print("Contains > 6? : \(dubliai.contains(where: {$0 > 6}))")
+print("Contains < 5? : \(dubliai.contains(where: {$0 < 5}))")
+print("Sorted: \(dubliai.sorted(by: { $0 > $1 }))")
+ */
+
+//   === --- CLOSURES --- ===   //
+
+/* kol kas niekas neaisku :((
+ var closure: () -> Void = {
+    print("A")
+    random()
+}
+func random() -> () {
+    print("A")
+    random()
+}
+closure = random
+closure()
+random()
+ */
+
+
 
