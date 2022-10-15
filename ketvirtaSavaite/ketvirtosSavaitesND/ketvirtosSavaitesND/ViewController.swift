@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var newContactAddConfirmTextField: UITextField!
     @IBOutlet weak var contactListTableView: UITableView!
-    @IBOutlet weak var goToNewContactAddPage: UIButton!
+    @IBOutlet weak var newContactAddButton: UIBarButtonItem!
     
     var contacts: [String] = ["Juozas: 223322", "Pranas: 500500"]
     
@@ -47,9 +47,11 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var contCell: contactListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "contactListCell", for: indexPath) as! contactListTableViewCell
-        contCell.cellNameLabel.text = contacts[indexPath.row]
-        return contCell    }
+        let contCell: contactListTableViewCell = tableView.dequeueReusableCell(withIdentifier: "contactListCell", for: indexPath) as! contactListTableViewCell
+        contCell.contactListTableCellLabel?.text = contacts[indexPath.row]
+        return contCell
+        
+    }
         
      
     

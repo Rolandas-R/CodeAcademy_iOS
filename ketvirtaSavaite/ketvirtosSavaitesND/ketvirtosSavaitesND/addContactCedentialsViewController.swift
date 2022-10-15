@@ -10,22 +10,15 @@ import UIKit
 class addContactCedentialsViewController: UIViewController {
     @IBOutlet weak var nameEnterTextForm: UITextField!
     @IBOutlet weak var phoneEnterTextForm: UITextField!
+    @IBOutlet weak var newContactSaveButton: UIBarButtonItem!
+    @IBOutlet weak var newContactAddCacelButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
