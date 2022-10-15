@@ -25,6 +25,9 @@ class ViewController: UIViewController {
     
     var contacts: [String] = ["Juozas: 223322", "Pranas: 500500"]
     
+//    var gautasNaujasVardas: String = ""
+//    var gautasNaujasTelefonas: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,12 +35,14 @@ class ViewController: UIViewController {
         contactListTableView.dataSource = self
         
         contactListTableView.register(UINib(nibName: "contactListTableViewCell", bundle: nil), forCellReuseIdentifier: "contactListCell")
+        
+        self.navigationItem.title = "Contact List"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: nil)
        
     }
 
-    @IBAction func addNewContactButtonPressed(_ sender: Any) {
         
-    }
+
     
 }
 
@@ -52,18 +57,30 @@ extension ViewController: UITableViewDataSource {
         return contCell
         
     }
-        
-     
     
-}
-func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
-    if editingStyle == .insert {
+        
 
-    }
 }
+
+////func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+////    if editingStyle == .insert {
+//
+//    }
+//}
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(contacts[indexPath.row])
     }
+   //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "segOne" {
+//            let cell = sender as! UITableViewCell
+//            if let indexPath = contactListTableView.indexPath(for: cell) {
+//                let nameControler = segue.destination as! addContactCedentialsViewController
+//                nameControler.fullName = contacts[indexPath.row]
+//
+//            }
+//        }
+//    }
 }
+
 

@@ -63,7 +63,7 @@
                     <navigationItem key="navigationItem" id="J21-7o-qYS">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="LOU-bc-pZq">
                             <connections>
-                                <segue destination="1sC-we-01A" kind="presentation" identifier="segOne" id="v4e-rk-5Fe"/>
+                                <segue destination="A1p-AK-NlU" kind="show" identifier="segOne" id="uA6-qV-QZp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -82,7 +82,7 @@
             <objects>
                 <viewController id="A1p-AK-NlU" customClass="addContactCedentialsViewController" customModule="ketvirtosSavaitesND" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6do-Cx-8gc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Your Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkI-bw-JVF">
@@ -96,13 +96,19 @@
                                 <rect key="frame" x="58" y="254" width="288" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6do-Cx-8gc" id="XXx-TN-sQN"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qmc-3n-MsJ">
                                 <rect key="frame" x="58" y="405" width="288" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="yes" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6do-Cx-8gc" id="Kre-1Y-coz"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Your Phone Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4i-r8-WAc">
                                 <rect key="frame" x="68" y="376" width="263" height="21"/>
@@ -115,20 +121,15 @@
                         <viewLayoutGuide key="safeArea" id="Z6W-or-DEX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HRn-cv-pMX">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="rSL-48-t7Y"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="ndK-wc-pi3"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="HRn-cv-pMX"/>
                     <connections>
                         <outlet property="nameEnterTextForm" destination="rjr-rZ-D3Z" id="MRb-Rc-MuZ"/>
-                        <outlet property="newContactAddCacelButton" destination="rSL-48-t7Y" id="EJR-2k-9El"/>
-                        <outlet property="newContactSaveButton" destination="ndK-wc-pi3" id="dh8-gK-BUj"/>
                         <outlet property="phoneEnterTextForm" destination="qmc-3n-MsJ" id="WR3-dl-KQD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gcu-iG-NaX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2810.144927536232" y="76.339285714285708"/>
+            <point key="canvasLocation" x="1877" y="76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IEB-ir-m2r">
@@ -150,25 +151,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xGl-vZ-jK0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-62.318840579710148" y="76.339285714285708"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Gmk-pR-TiS">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1sC-we-01A" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="6N3-RF-DSH"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eGS-4V-gjY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="A1p-AK-NlU" kind="relationship" relationship="rootViewController" id="4PG-Tr-FCn"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qmn-eo-d9L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1900.0000000000002" y="76.339285714285708"/>
         </scene>
     </scenes>
     <resources>
