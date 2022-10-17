@@ -110,10 +110,17 @@
                         <viewLayoutGuide key="safeArea" id="Z6W-or-DEX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HRn-cv-pMX"/>
+                    <navigationItem key="navigationItem" id="HRn-cv-pMX">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="whC-8b-R6s">
+                            <connections>
+                                <action selector="saveButtonTap:" destination="A1p-AK-NlU" id="VsB-px-edo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="nameEnterTextForm" destination="rjr-rZ-D3Z" id="MRb-Rc-MuZ"/>
                         <outlet property="phoneEnterTextForm" destination="qmc-3n-MsJ" id="WR3-dl-KQD"/>
+                        <outlet property="saveButton" destination="whC-8b-R6s" id="shn-Gg-v0l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gcu-iG-NaX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

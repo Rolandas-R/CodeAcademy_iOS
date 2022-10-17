@@ -15,18 +15,26 @@
  5. Prideti nauja kontakta i array ir atnaujinti duomenis
  */
 
+
+
+
+//Perdaryti su segu, nes kol kas neatnaujina listo
+
+
 import UIKit
 
+var contacts: [String] = ["Juozas: 223322", "Pranas: 500500"]
+
+func contactAppend(newContact: String){
+    contacts.append(newContact)
+    print(contacts)
+}
 class ViewController: UIViewController {
 
 
     @IBOutlet weak var contactListTableView: UITableView!
     @IBOutlet weak var newContactAddButton: UIBarButtonItem!
-    
-    var contacts: [String] = ["Juozas: 223322", "Pranas: 500500"]
-    
-//    var gautasNaujasVardas: String = ""
-//    var gautasNaujasTelefonas: String = ""
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,19 +46,8 @@ class ViewController: UIViewController {
         
         self.navigationItem.title = "Contact List"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: nil)
-        
-//        ViewController.completionHandler = { text -> <#Result#> in
-//            
-//            print(“text = \(text)”)
-//
-//            return text.characters.count
-//            }
-       
     }
 
-        
-
-    
 }
 
 extension ViewController: UITableViewDataSource {
@@ -65,20 +62,22 @@ extension ViewController: UITableViewDataSource {
         
     }
     
-        
-
+    func reloadList(){
+        self.contactListTableView.reloadData()
+    }
 }
 
-////func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
-////    if editingStyle == .insert {
-//
-//    }
-//}
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(contacts[indexPath.row])
     }
+}
+ 
     
+    
+    
+    
+
 
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "segOne" {
@@ -89,7 +88,9 @@ extension ViewController: UITableViewDelegate {
 //
 ////            }
 //    }
-}
+
+
+
 
 
 
