@@ -19,7 +19,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var newContactAddConfirmTextField: UITextField!
+
     @IBOutlet weak var contactListTableView: UITableView!
     @IBOutlet weak var newContactAddButton: UIBarButtonItem!
     
@@ -38,6 +38,13 @@ class ViewController: UIViewController {
         
         self.navigationItem.title = "Contact List"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: nil, action: nil)
+        
+//        ViewController.completionHandler = { text -> <#Result#> in
+//            
+//            print(“text = \(text)”)
+//
+//            return text.characters.count
+//            }
        
     }
 
@@ -71,16 +78,18 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(contacts[indexPath.row])
     }
-   //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "segOne" {
 //            let cell = sender as! UITableViewCell
 //            if let indexPath = contactListTableView.indexPath(for: cell) {
 //                let nameControler = segue.destination as! addContactCedentialsViewController
-//                nameControler.fullName = contacts[indexPath.row]
+//                nameControler.newContact = contacts[indexPath.row]
 //
-//            }
-//        }
+////            }
 //    }
 }
+
 
 
