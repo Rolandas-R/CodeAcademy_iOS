@@ -16,9 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tcK-PW-Uqm">
-                                <rect key="frame" x="20" y="152" width="374" height="615"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tcK-PW-Uqm">
+                                <rect key="frame" x="20" y="118" width="374" height="714"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tcK-PW-Uqm" secondAttribute="height" multiplier="374:615" id="1Pl-nO-Dks"/>
+                                    <constraint firstAttribute="width" secondItem="tcK-PW-Uqm" secondAttribute="height" multiplier="11:21" id="Xw0-Pw-kqz"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="a2A-QF-KEe">
                                         <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
@@ -42,6 +46,8 @@
                             <constraint firstItem="tcK-PW-Uqm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="PcC-Pe-pCO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tcK-PW-Uqm" secondAttribute="bottom" constant="20" id="QwW-kU-8UR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tcK-PW-Uqm" secondAttribute="trailing" constant="20" id="X7q-kh-JDZ"/>
+                            <constraint firstItem="tcK-PW-Uqm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="bui-hy-B0p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tcK-PW-Uqm" secondAttribute="bottom" constant="30" id="gMk-aY-XWa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Contact List" id="J21-7o-qYS">

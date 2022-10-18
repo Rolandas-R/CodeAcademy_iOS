@@ -13,6 +13,8 @@
  3. Buttonas + , kuri paspaudus atsidaro kitas langas, kuriame reikes ivesti kontakto duomenis: varda it telefono numeri
  4. Kai kontaktas iveda duomenis (buna sukurtas) grizti i pradini langa su closures pagalba;
  5. Prideti nauja kontakta i array ir atnaujinti duomenis
+ 
+ user Defaults 
  */
 
 

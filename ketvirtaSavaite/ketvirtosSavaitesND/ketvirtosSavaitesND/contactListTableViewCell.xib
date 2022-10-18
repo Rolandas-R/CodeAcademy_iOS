@@ -16,14 +16,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="481" height="63"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrm-O3-YIq">
-                        <rect key="frame" x="12" y="12" width="314" height="35"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrm-O3-YIq">
+                        <rect key="frame" x="12" y="12" width="457" height="39"/>
                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="xrm-O3-YIq" secondAttribute="bottom" constant="12" id="AQY-a0-7YK"/>
+                    <constraint firstAttribute="trailing" secondItem="xrm-O3-YIq" secondAttribute="trailing" constant="12" id="HYT-Tx-Xhh"/>
+                    <constraint firstItem="xrm-O3-YIq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="s0r-AO-mcC"/>
+                    <constraint firstItem="xrm-O3-YIq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="zT3-D8-bzd"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
