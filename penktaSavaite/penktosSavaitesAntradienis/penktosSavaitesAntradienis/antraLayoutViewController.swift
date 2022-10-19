@@ -18,6 +18,8 @@ class antraLayoutViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var fotke: UIImageView!
     
     
+    @IBOutlet var tapAtpazinejas: UITapGestureRecognizer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tekstoIvedimoLaukas.delegate = self
@@ -25,7 +27,7 @@ class antraLayoutViewController: UIViewController, UITextFieldDelegate {
     }
     
  
-    @IBAction func tapPicture(_ sender: Any) {
+    @IBAction func tapPicture(_ sender: UITapGestureRecognizer) {
         print("nuotrauka ryskiame view buvo paspausta")
     }
     

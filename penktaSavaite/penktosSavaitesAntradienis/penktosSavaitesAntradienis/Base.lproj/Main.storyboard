@@ -108,20 +108,25 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UsH-CO-QRk">
                                 <rect key="frame" x="12" y="292" width="390" height="160"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z1k-gs-b65">
-                                        <rect key="frame" x="24" y="24" width="342" height="112"/>
+                                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z1k-gs-b65">
+                                        <rect key="frame" x="24" y="0.0" width="342" height="160"/>
                                         <gestureRecognizers/>
-                                        <variation key="heightClass=compact-widthClass=compact" image="Image-2"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <nil key="image"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <nil key="image"/>
+                                        </variation>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="zgY-T9-NMV" appends="YES" id="peU-tP-MNw"/>
+                                            <outletCollection property="gestureRecognizers" destination="zgY-T9-NMV" appends="YES" id="1Yq-AE-tgw"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.24154951565142024" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="z1k-gs-b65" firstAttribute="top" secondItem="UsH-CO-QRk" secondAttribute="top" constant="24" id="Gyo-Eo-xJa"/>
+                                    <constraint firstItem="z1k-gs-b65" firstAttribute="centerY" secondItem="UsH-CO-QRk" secondAttribute="centerY" id="LPj-U9-y0y"/>
                                     <constraint firstAttribute="trailing" secondItem="z1k-gs-b65" secondAttribute="trailing" constant="24" id="Z5f-CW-u6S"/>
-                                    <constraint firstAttribute="bottom" secondItem="z1k-gs-b65" secondAttribute="bottom" constant="24" id="oP6-fv-q4y"/>
                                     <constraint firstItem="z1k-gs-b65" firstAttribute="leading" secondItem="UsH-CO-QRk" secondAttribute="leading" constant="24" id="yEQ-cl-6Tg"/>
                                 </constraints>
                             </view>
@@ -141,6 +146,7 @@
                         <constraints>
                             <constraint firstItem="Ufo-my-TVM" firstAttribute="leading" secondItem="dAH-3R-n01" secondAttribute="leading" constant="12" id="3iB-Ji-gff"/>
                             <constraint firstItem="Ufo-my-TVM" firstAttribute="top" secondItem="eVD-p6-Hd1" secondAttribute="bottom" constant="12" id="6Zw-io-bWX"/>
+                            <constraint firstItem="z1k-gs-b65" firstAttribute="height" secondItem="Ufo-my-TVM" secondAttribute="height" id="7YP-Yp-E0e"/>
                             <constraint firstItem="UsH-CO-QRk" firstAttribute="width" secondItem="Ufo-my-TVM" secondAttribute="width" id="98N-qB-bVt"/>
                             <constraint firstItem="UsH-CO-QRk" firstAttribute="top" secondItem="Ufo-my-TVM" secondAttribute="bottom" constant="12" id="GC4-bC-HOQ"/>
                             <constraint firstItem="dAH-3R-n01" firstAttribute="trailing" secondItem="eVD-p6-Hd1" secondAttribute="trailing" constant="24" id="M9b-jT-C4U"/>
@@ -154,6 +160,7 @@
                     </view>
                     <connections>
                         <outlet property="fotke" destination="z1k-gs-b65" id="NNl-tg-787"/>
+                        <outlet property="tapAtpazinejas" destination="zgY-T9-NMV" id="N4h-K4-kEd"/>
                         <outlet property="tekstoIvedimoLaukas" destination="eVD-p6-Hd1" id="aXI-aV-DX0"/>
                         <outlet property="tekstoLabelis" destination="Ufo-my-TVM" id="v4f-To-9tq"/>
                     </connections>
@@ -170,7 +177,6 @@
     </scenes>
     <resources>
         <image name="F-150_006" width="730" height="486"/>
-        <image name="Image-2" width="730" height="486"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
