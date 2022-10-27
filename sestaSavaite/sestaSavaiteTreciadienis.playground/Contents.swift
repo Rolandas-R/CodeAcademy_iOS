@@ -299,6 +299,12 @@ print(electricVehicle.electricRange)
 
     //#Uzduotis
 
+//enum fuels: String{
+//    case electric = "electric"
+//    case diesel = "diesel"
+//    case petrol = "petrol"
+//}
+
 
 class MyCar {
     private let name: String
@@ -308,6 +314,8 @@ class MyCar {
     private var currentSpeed: Double
     private var currentGear: Int
     
+// mano bandymas
+
     init(myCarName: String, myCarPurchaseCost: Double, myCarRunningCost: Double, myCarFuel: String, myCarSpeed: Double, myCarGear: Int) {
         self.name = myCarName
         self.purchaseCost = myCarPurchaseCost
@@ -315,29 +323,69 @@ class MyCar {
         self.fuelType = myCarFuel
         self.currentSpeed = myCarSpeed
         self.currentGear = myCarGear
+        
+        print("New object: \(myCarName)")
     }
-
-    func speedUp(to limit: Double) -> Double{
+                            
+    func needForSpeed(to limit: Double) {                 // destytojo variantas
+        print("Now my speed is \(currentSpeed) but I'll increase it by \(limit), so my speed will be \(currentSpeed + limit)")
         currentSpeed = currentSpeed + limit
-        return currentSpeed
     }
-
     
-//    func gearChange(to gear: Int)
-
-//
-//    init() {
-//        name = "Volvo"
-//        purchaseCost = 2222
-//        costToRun = 111.11
-//        fuelType = "Diesel"
-//        currentSpeed = 100.0
-//        currentGear = 5
-//    }
-
+    func braking(to speed: Double) {                      // destytojo variantas
+        currentSpeed = currentSpeed - speed
+        print("Now my speed is \(currentSpeed) but I'll decrease it by \(speed), so my speed will be \(currentSpeed - speed)")
+    }
+    
+    func gearChange(to gear: Int) {                       // destytojo variantas
+        if fuelType.lowercased() == "Electric" && (gear > 2 || gear < -1) {
+            print("Can't change gear")
+            return
+        }
+        print("My current gear is: \(currentGear), I am gonna change gear to \(gear)")
+        currentGear = gear
+    }
 }
-let automobilis = MyCar(myCarName: "Suzuki", myCarPurchaseCost: 1000.0, myCarRunningCost: 25.25, myCarFuel: "Diesel", myCarSpeed: 25.25, myCarGear: 5)
-automobilis.speedUp(to: 100)
+  
+/* dar variantas kaip su sia funkcija galima pasitikrint ar teisingas begis ijungtas ir po to implementuoti auksciau esancia gearchange f-ja
+
+    func changeGear(gear: Int) {
+        if validateGear(gear: gear, fuelType: fuelType) {
+            print("My current gear is: \(currentGear), it will become: \(gear)")
+            currentGear = gear
+        } else {
+            return
+        }
+    }
+    func validateGear(gear: Int, fuelType: String) -> Bool {
+        if fuelType.lowercased() == "Electric" && (gear > 2 || gear < -1) {
+            print("Can't change gear")
+            return false
+        }
+        return true
+    }
+*/
+
+let automobilis = MyCar(myCarName: "Suzuki", myCarPurchaseCost: 1000.0, myCarRunningCost: 25.25, myCarFuel: "Petrol", myCarSpeed: 25.25, myCarGear: 4)
+
+let elektrinis = MyCar(myCarName: "Chevy Volta", myCarPurchaseCost: 1500.0, myCarRunningCost: 12.12, myCarFuel: "electric", myCarSpeed: 55.00, myCarGear: 1)
+
+let dyzelinis = MyCar(myCarName: "MB", myCarPurchaseCost: 3000, myCarRunningCost: 150, myCarFuel: "Diesel", myCarSpeed: 120, myCarGear: 4)
+
+//automobilis.needForSpeed(to: 100)
+//automobilis.braking(to: 25.0)
+//automobilis.gearChange(to: 5)
+
+elektrinis.needForSpeed(to: 20)
+elektrinis.braking(to: 25.0)
+elektrinis.gearChange(to: 2)
+
+// ================     kita uzduotis   ===================== //
+
+
+
+
+
 
 
 
