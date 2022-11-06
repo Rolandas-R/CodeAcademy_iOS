@@ -90,8 +90,6 @@ class Medic: Human {
     }
 }
 
-
-
 // objektas testinisZmogus
 var testinisZmogus: Human = Human(
     hitpointParametrai: 100,
@@ -99,7 +97,7 @@ var testinisZmogus: Human = Human(
     stiprybeParametras: 79)
 print("stiprybe: \(testinisZmogus.stiprybe), greitis: \(testinisZmogus.greitis) ir hitpointas: \(testinisZmogus.hitpointas)")
 
-// begimas funkcijos aktyvavimas ir printinimas
+// begimo funkcijos aktyvavimas ir printinimas
 testinisZmogus.begimas(atstumas: 1500)
 print("testinis zmogus su greiciu \(testinisZmogus.greitis) atstuma 1500 iveiks per \(testinisZmogus.begimas(atstumas: 1500))")
 
@@ -119,10 +117,17 @@ print(marine.hitpointas)
 var scout: Scout = Scout()
 var medic: Medic = Medic()
 
+print("scout hitpointas ir stiprybe:  \(scout.hitpointas), \(scout.stiprybe)")
+print("marine hitpointas ir stiprybe: ", marine.hitpointas, marine.stiprybe)
+
 scout.ataka(otherHuman: marine)
-print(scout.hitpointas)
-print(marine.hitpointas)
-print(marine.stiprybe)
+print("po scout atakos scout parametrai", scout.hitpointas, scout.stiprybe)
+print("po scout atakos marine hitpointas ir stiprybe:", marine.hitpointas, marine.stiprybe)
+
 medic.ataka(otherHuman: marine)
-print(marine.stiprybe)
+print("po mediko atakos marine parametrai:", marine.hitpointas, marine.stiprybe)
+
+scout.ataka(otherHuman: testinisZmogus)
+print("poscout atakos testinisZmogus parametrai:", testinisZmogus.hitpointas)
 medic.gydyti(otherHuman: testinisZmogus)
+print("zmogus pagydytas ir jo hitpointas yra:", testinisZmogus.hitpointas)
