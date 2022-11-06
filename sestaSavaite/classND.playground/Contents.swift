@@ -1,5 +1,7 @@
 import UIKit
 
+// MARK: Namu darbas su klasemis 20221027
+
 class Human {
     var hitpointas: Double
     var greitis: Int
@@ -131,3 +133,159 @@ scout.ataka(otherHuman: testinisZmogus)
 print("poscout atakos testinisZmogus parametrai:", testinisZmogus.hitpointas)
 medic.gydyti(otherHuman: testinisZmogus)
 print("zmogus pagydytas ir jo hitpointas yra:", testinisZmogus.hitpointas)
+
+
+// EXTENSIONS // ----------
+
+extension String {
+    func trimSpaces() -> String {
+        return components(separatedBy: .whitespaces).joined()
+    }
+    
+    func separatedByDoubleDashes() -> String {
+        return components(separatedBy: .whitespaces).joined(separator: "--")
+    }
+}
+
+print("extensiono bandymas printinti be whitespaces".trimSpaces())
+print("extensiono bandymas printinti be whitespaces".separatedByDoubleDashes())
+
+// my idea half of Double
+extension Double {
+    func halved() -> Double {
+        return self / 2
+    }
+// Double extension kuris apvalina i atitinkama skaiciu po kablelio (paimta is StackOverflow)
+    func rounded(to places: Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
+}
+print(10.0.halved())
+print(52.13215878.halved().rounded(to: 2))
+
+
+// MARK: COMPUTED VALUES / PROPERTIES
+
+class Rectangle {
+    let width:  Double
+    let height: Double
+    
+    init(width:  Double,
+         height: Double) {
+        self.width   = width
+        self.height  = height
+    }
+// galima per f-ja gauti staciakampio perimetra:
+//    func perimeter() -> Double {
+//        rect.height * 2 + rect.width * 2
+//    }
+}
+// staciakampio perimetra galima gauti ir per computed values, pridejus Rectangle extension:
+
+extension Rectangle {
+    var perimeter: Double {
+        return height * 2 + width * 2
+    }
+}
+
+let rect = Rectangle(width: 25.2, height: 35.5)
+print("rectangle height is \(rect.height) and rectangle width is \(rect.width)")
+print("rectangle perimeter is \(rect.height * 2 + rect.width * 2)")
+//print("rect perimeter by function: \(rect.perimeter())")
+print(rect.perimeter)
+
+
+// MARK: PROTOKOLAI (Protocols)
+
+protocol PerimeterCalculating {
+    func perimeter() -> Double
+}
+
+class Circle: PerimeterCalculating {
+    let radius: Double
+    
+    init(radius: Double) {
+        self.radius = radius
+    }
+    
+    init(diameter: Double) {
+        self.radius = diameter / 2
+    }
+    
+    func perimeter() -> Double {
+        return 2 * 3.15 * radius
+    }
+}
+
+var perimeterCalculators: [PerimeterCalculating] = []
+
+let circle = Circle(diameter: 22.22)
+let circle2 = Circle(radius: 15.57)
+
+perimeterCalculators.append(circle)
+perimeterCalculators.append(circle2)
+
+for _ in 0..<perimeterCalculators.count {
+    print("perimeter: \(perimeterCalculators[0].perimeter())")
+}
+print("perimeter: \(perimeterCalculators[1].perimeter())")
+
+// Assigment 3  (Namu Darbas)
+
+protocol Describable {
+    func describe()
+}
+
+extension String: Describable {
+    func describe() {
+        print("Tai yra String tipas, kuris dar kitaip gali buti suprantamas, kaip tekstas")
+    }
+}
+
+extension Int: Describable {
+    func describe() {
+        print("Tai yra Integer tipas, kuris dar kitaip gali buti suprantamas, kaip sveikas skaicius")
+    }
+}
+
+extension Double: Describable {
+    func describe() {
+        print("Tai yra Double tipas, kuris dar kitaip gali buti suprantamas, kaip realus skaicius, su kableliu")
+    }
+}
+
+extension Float: Describable {
+    func describe() {
+        print("Tai yra Float tipas, kuris dar kitaip vadinamas skaicius su slankiuoju kableliu")
+    }
+}
+
+extension Bool: Describable {
+    func describe() {
+        print("Tai yra Boolean tipas, kuris pateikia atsakyma TAIP arba NE")
+    }
+}
+
+var descriptionable: [Describable] = []
+//print(7.describe())
+//print("Medikas".describe())
+//print(55.25.describe())
+
+let stringTipas: String = "medikas"
+let intTipas: Int = 7
+let doubleTipas: Double = 55.25
+let floatTipas: Float = 25.250
+let boolTipas: Bool = true
+
+
+descriptionable.append(stringTipas)
+descriptionable.append(intTipas)
+descriptionable.append(doubleTipas)
+descriptionable.append(floatTipas)
+descriptionable.append(boolTipas)
+
+
+for i in 0..<descriptionable.count {
+    descriptionable[i].describe()
+}
