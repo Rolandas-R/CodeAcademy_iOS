@@ -16,7 +16,7 @@
  
  user Defaults 
  */
-
+#warning("neatsiranda scrollas kai uzpildai visa TableView kontaktais")
 
 import UIKit
 
