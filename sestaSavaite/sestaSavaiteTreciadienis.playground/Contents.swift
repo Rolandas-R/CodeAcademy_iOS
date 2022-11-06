@@ -179,6 +179,7 @@ print(person.ownedVehicle.manufacturer)
  */
 
 
+<<<<<<< HEAD
 //    -------  Penktas PVZ ----------//
 
 // Sitas pavyzdys su parent - child
@@ -307,10 +308,114 @@ print(electricVehicle.electricRange)
 
 
 class MyCar {
+=======
+//   PADARYTI VELIAU
+
+
+// #5
+
+//class Vehicle {
+//    var manufacturer: String
+//    var year: Int
+//
+//    init(vehicleManufacturer: String, vehicleYear: Int) {
+//        manufacturer = vehicleManufacturer
+//        year = vehicleYear
+//    }
+//}
+//
+//class ElectricVehicle: Vehicle {
+//    var electricRange: Double
+//
+//    init(manufacturer: String, year: Int, electricRange: Double) {
+//        self.electricRange = electricRange
+//        super.init(vehicleManufacturer: manufacturer, vehicleYear: year)
+//    }
+//
+//    override init(vehicleManufacturer: String, vehicleYear: Int) {
+//        electricRange = 100.0
+//        super.init(vehicleManufacturer: vehicleManufacturer, vehicleYear: vehicleYear)
+//    }
+//
+//    init() {
+//        self.electricRange = 1
+//        super.init(vehicleManufacturer: "", vehicleYear: 2)
+//    }
+//}
+//
+//let electricVehicle = ElectricVehicle(vehicleManufacturer: "Audi", vehicleYear: 1992)
+//
+//let anotherElectricVehicle = ElectricVehicle()
+//
+//class Bus: Vehicle {
+//    var isToiletPresent = true
+//    var isTrolley = false
+//}
+//
+//let bus = Bus(vehicleManufacturer: "Scania", vehicleYear: 2005)
+//
+//
+//class Motorcycle: Vehicle {
+//    var isPaddlesForPassengerPresent = false
+//}
+//
+//let motorcycle = Motorcycle(vehicleManufacturer: "Yamaha", vehicleYear: 2001)
+//
+//motorcycle.isPaddlesForPassengerPresent = true
+//motorcycle.manufacturer = "Ducati"
+//motorcycle.year = 2010
+
+
+// #6
+
+//class Vehicle {
+//    var manufacturer: String
+//    var year: Int
+//
+//    init(vehicleManufacturer: String, vehicleYear: Int) {
+//        manufacturer = vehicleManufacturer
+//        year = vehicleYear
+//    }
+//
+//    func sayBeepBeep() {
+//        print("Beep beep! I am a Vehicle!")
+//    }
+//}
+//
+//class ElectricVehicle: Vehicle {
+//    var electricRange: Double
+//
+//    init(manufacturer: String, year: Int, electricRange: Double) {
+//        self.electricRange = electricRange
+//        super.init(vehicleManufacturer: manufacturer, vehicleYear: year)
+//    }
+//
+//    func charge(hours: Int) {
+//        electricRange += 100 * Double(hours)
+////        electricRange = electricRange + 100 * Double(hours)
+//    }
+//
+//    override func sayBeepBeep() {
+//        super.sayBeepBeep()
+//        print("Beep beep! I am an electric vehicle!")
+//    }
+//}
+//
+//let electricVehicle = ElectricVehicle(manufacturer: "Tesla", year: 2017, electricRange: 350)
+//electricVehicle.sayBeepBeep()
+//
+//print(electricVehicle.electricRange)
+//electricVehicle.charge(hours: 2)
+//print(electricVehicle.electricRange)
+
+    //#Uzduotis
+class Vehicle {
+>>>>>>> main
     private let name: String
     private let purchaseCost: Double
     private let costToRun: Double
     private let fuelType: String
+<<<<<<< HEAD
     private var currentSpeed: Double
     private var currentGear: Int
     
@@ -390,3 +495,8 @@ elektrinis.gearChange(to: 2)
 
 
 
+=======
+    private var currentSpeed: Duoble
+    private var currentGear: Int
+}
+>>>>>>> main

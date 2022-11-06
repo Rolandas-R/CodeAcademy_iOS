@@ -3,12 +3,20 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
+<<<<<<< HEAD
          documentLocation = "file:///Users/reromac/CodeAcademy_iOS/CodeAcademy_iOS/sestaSavaite/sestaSavaiteTreciadienis.playground#CharacterRangeLen=6&amp;CharacterRangeLoc=4712&amp;EndingColumnNumber=11&amp;EndingLineNumber=176&amp;StartingColumnNumber=5&amp;StartingLineNumber=176&amp;Timestamp=688582426.882416"
+=======
+         documentLocation = "file:///Users/reromac/CodeAcademy_iOS/CodeAcademy_iOS/sestaSavaite/sestaSavaiteTreciadienis.playground#CharacterRangeLen=6&amp;CharacterRangeLoc=4712&amp;EndingColumnNumber=11&amp;EndingLineNumber=176&amp;StartingColumnNumber=5&amp;StartingLineNumber=176&amp;Timestamp=688545851.628081"
+>>>>>>> main
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
+<<<<<<< HEAD
          documentLocation = "file:///Users/reromac/CodeAcademy_iOS/CodeAcademy_iOS/sestaSavaite/sestaSavaiteTreciadienis.playground#CharacterRangeLen=6271&amp;CharacterRangeLoc=4788&amp;EndingColumnNumber=0&amp;EndingLineNumber=392&amp;StartingColumnNumber=1&amp;StartingLineNumber=177&amp;Timestamp=688582426.883463"
+=======
+         documentLocation = "file:///Users/reromac/CodeAcademy_iOS/CodeAcademy_iOS/sestaSavaite/sestaSavaiteTreciadienis.playground#CharacterRangeLen=2832&amp;CharacterRangeLoc=4788&amp;EndingColumnNumber=0&amp;EndingLineNumber=289&amp;StartingColumnNumber=1&amp;StartingLineNumber=177&amp;Timestamp=688545851.628956"
+>>>>>>> main
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
