@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         
         switch currentState {
         case .register:
-            registerButton.titleLabel?.text = "Registration"
+            registerButton.titleLabel?.text = "Register"
         case .login:
             registerButton.titleLabel?.text = "Login"
         }
