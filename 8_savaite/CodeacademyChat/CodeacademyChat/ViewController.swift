@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
     var currentState: State = .register
     let userManager = UserManager()
+    var userForSegue: User!
     
     
     override func viewDidLoad() {
@@ -73,22 +74,22 @@ class ViewController: UIViewController {
                 errorMessageLabel.isHidden = false
             } else {
                 errorMessageLabel.isHidden = true
-//                if let user = result.user {
-//                    userForSegue = user
-//                    performSegue(withIdentifier: "home", sender: nil)
-//                }
-//            }
+                if let user = result.user {
+                    userForSegue = user
+                    performSegue(withIdentifier: "home", sender: nil)
+                }
+            }
             
             break
-//        }
-//    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "home" {
-//            if let viewController = segue.destination as? HomeViewController {
-//                viewController.user = userForSegue
-//                userForSegue = nil
-//
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "home" {
+            if let viewController = segue.destination as? HomeViewController {
+                viewController.user = userForSegue
+                userForSegue = nil
+
             }
         }
     }

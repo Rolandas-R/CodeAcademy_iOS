@@ -287,7 +287,7 @@
                         <outlet property="joinChatButton" destination="C5W-n4-Mzm" id="GiS-Hk-Krp"/>
                         <outlet property="logoutButton" destination="fYN-1e-wAa" id="7zm-bX-juK"/>
                         <outlet property="offLineUsersButton" destination="5rt-DR-lgF" id="Uta-wd-oyb"/>
-                        <outlet property="offlineUsersButton" destination="7NB-48-tqX" id="C3y-Sy-QJm"/>
+                        <outlet property="onlineUsersButton" destination="7NB-48-tqX" id="fd1-mq-BPI"/>
                         <outlet property="roomIdLabel" destination="plv-15-bSf" id="jP6-CK-XDE"/>
                         <outlet property="settingsButton" destination="74C-TH-rle" id="Ua4-Iw-7dQ"/>
                         <outlet property="welcomeUserLabel" destination="h7v-gP-N8W" id="aOh-l5-JxS"/>
