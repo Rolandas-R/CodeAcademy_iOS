@@ -19,6 +19,7 @@
 		922883B3291ACAA900A79E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922883B2291ACAA900A79E3D /* Assets.xcassets */; };
 		922883B6291ACAA900A79E3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922883B4291ACAA900A79E3D /* LaunchScreen.storyboard */; };
 		92565ED9291AD0720037FC13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92565ED8291AD0720037FC13 /* HomeViewController.swift */; };
+		926D06A2291C21BA006B9F81 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D06A1291C21BA006B9F81 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		922883B5291ACAA900A79E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		922883B7291ACAA900A79E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92565ED8291AD0720037FC13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		926D06A1291C21BA006B9F81 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				920FB952291AE71B0026F347 /* Message.swift */,
 				920FB954291AE86D0026F347 /* Room.swift */,
 				920FB956291AE96F0026F347 /* RoomManager.swift */,
+				926D06A1291C21BA006B9F81 /* SettingsViewController.swift */,
 			);
 			path = CodeacademyChat;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				920FB95C291AFF250026F347 /* UserManager.swift in Sources */,
 				922883AE291ACA9F00A79E3D /* ViewController.swift in Sources */,
 				920FB957291AE96F0026F347 /* RoomManager.swift in Sources */,
+				926D06A2291C21BA006B9F81 /* SettingsViewController.swift in Sources */,
 				922883AA291ACA9F00A79E3D /* AppDelegate.swift in Sources */,
 				920FB955291AE86D0026F347 /* Room.swift in Sources */,
 				920FB95A291AFEB90026F347 /* User.swift in Sources */,

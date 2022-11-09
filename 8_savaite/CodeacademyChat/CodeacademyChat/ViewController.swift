@@ -87,6 +87,7 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "home" {
             if let viewController = segue.destination as? HomeViewController {
+                // cia bus pakeitimai navigationcontrolerio
                 viewController.user = userForSegue
                 userForSegue = nil
 
