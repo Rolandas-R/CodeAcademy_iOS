@@ -25,6 +25,27 @@ class SettingsViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
         // userio username text fielde perduodama ir atvaizduojama vartotojo username
         userNameSettingsTextField.text = user.username
-
     }
+    
+    @IBAction func userEditButtonTapped(_ sender: Any) {
+        let cancelAction = UIAlertAction(title: "cancel", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        
+        let alertController = UIAlertController(title: "usernameEditController", message: "Edit user name:", preferredStyle: .alert)
+        alertController.addAction(cancelAction)
+        alertController.addAction(okAction)
+        
+        alertController.addTextField { textField in
+            textField.placeholder = "Username"
+        }
+        
+        self.present(alertController, animated: true)
+        
+//        alert.addAction(UIAlertAction(title: "OK", style: .alert, handler: { _ in
+//            let passwordTextField.placeholder = placeholder
+//
+//        }
+        
+    }
+    
 }

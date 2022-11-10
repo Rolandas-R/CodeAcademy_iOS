@@ -178,6 +178,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Join Chat">
                                     <color key="baseBackgroundColor" red="0.0" green="0.65836974439999996" blue="0.63388744679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="joinChatButtonTapped:" destination="xoL-QE-M5I" eventType="touchUpInside" id="S7A-jk-1se"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NB-48-tqX">
                                 <rect key="frame" x="20" y="480" width="353" height="50"/>
@@ -331,6 +334,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Edit"/>
+                                <connections>
+                                    <action selector="userEditButtonTapped:" destination="lyE-Zn-bWW" eventType="touchUpInside" id="dMJ-JS-wUm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gms-t0-8NE">
                                 <rect key="frame" x="319.66666666666669" y="435" width="53.333333333333314" height="40"/>

@@ -43,7 +43,15 @@ class HomeViewController: UIViewController {
         welcomeUserLabel.text = "Welcome, \(user.username)"
     }
     
-/* seguas kurio pagalba bus perduodami duomenys ir pereinama toliau i SettingsViewControlleri
+    @IBAction func joinChatButtonTapped(_ sender: Any) {
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let alertController = UIAlertController(title: "Error joining room", message: "Room not found", preferredStyle: .alert)
+        alertController.addAction(alertAction)
+          self.present(alertController, animated: true)
+    }
+    
+    
+/* segas kurio pagalba bus perduodami duomenys ir pereinama toliau i SettingsViewControlleri
  */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
