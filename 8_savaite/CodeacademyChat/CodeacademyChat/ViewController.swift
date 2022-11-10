@@ -22,8 +22,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var errorMessageLabel: UILabel!
     
- /* pradine busena registravimosi, taip pat kintamieji ir konstantos
- reikalingi perduoti ar gauti userio duomenis. Naudojamos klases UserManager ir User
+ /* pradine busena yra registravimosi, taip pat kintamieji ir konstantos
+ reikalingi perduoti ar gauti userio duomenis. Naudojamos klases UserManager ir User.
+  UserManager klase reikalinga aprasyti ir perduoti sukurtu useriu duomenis
   */
     var currentState: State = .register
     let userManager = UserManager()

@@ -15,22 +15,16 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var passwSettingsTextField: UILabel!
     @IBOutlet weak var passwSettingsEditButton: UIButton!
     @IBOutlet weak var manageHistorySettingsButton: UIButton!
+
+    // vartotojo kintamasis su User class parametrais
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // navigation controlerio back buttonas bus rodomas kad grizt i pries tai esanti VC
+        navigationController?.isNavigationBarHidden = false
+        // userio username text fielde perduodama ir atvaizduojama vartotojo username
+        userNameSettingsTextField.text = user.username
 
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

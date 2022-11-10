@@ -7,21 +7,23 @@
 
 import Foundation
 
+/* Structas reikalingas suhandlinti registravimo f-jos rezultatus, atsizvelgiant i pastaruosius Useris yra sukuriamas arba ne. Taip pat UserResult structe yra erroro zinutes konstanta, kuri perduodama i kitus VC atvaizdavimui, jei switchai pereje per userLista randa neatikimu loginantis ir ivedant netinkama username, passw, ar neconfirminant passwordo
+ */
 struct UserResult {
     let user: User?
     let errorMessage: String?
 }
 
+// vartotoju managinimo klase, kurioje saugomas userListas
 class UserManager {
     var userList: [User] = []
     
 // vartotojo registravimo f- ja. grazina UserResult struct'a
     func register(username: String, password: String, confirmPassword: String) -> UserResult {
         
-// guardas padeda patikrinti ar ivestas slaptazodis ir passwordas i tekstini lauka
+        // guardas padeda patikrinti ar ivestas slaptazodis ir passwordas i tekstini lauka
         guard !username.isEmpty, !password.isEmpty
-                
-// tikrinimo logika: jei kazkas neivesta ar nesutampa - useris nesukuriamas ir isvedamas klaidos pranesimas
+        // tikrinimo logika: jei kazkas neivesta ar nesutampa - useris nesukuriamas ir isvedamas klaidos pranesimas
         else {
             return UserResult(user: nil, errorMessage: "Fill username and/or password")
         }
@@ -29,18 +31,17 @@ class UserManager {
             return UserResult(user: nil, errorMessage: "Your password didn't match")
         }
         
-// pereinama ir patikrinamas userListas
+        // pereinama ir patikrinamas userListas
         for user in userList {
             if username == user.username {
                 return UserResult(user: nil, errorMessage: "User with same username already exists")
             }
         }
         
-// jei viskas tvarkoje sukuriamas naujas objektas user ir pridedamas prie userListo
+        // jei viskas tvarkoje sukuriamas naujas objektas user ir pridedamas prie userListo
         let user = User(username: username, password: password, isOnline: true)
         userList.append(user)
-        
-// perduodama UserResult structui
+        // perduodama UserResult structui
         return UserResult(user: user, errorMessage: nil)
     }
     
@@ -50,7 +51,7 @@ class UserManager {
         /* antras variantas (CLOSURE) */
         let userOptional = userList.first(where: { $0.username == username })
 
-// guardas patikrina ir toliau praleidzia (arba ne), atsizvelgiant ar sutampa pateikti userio duomenys
+        // guardas patikrina ir toliau praleidzia (arba ne), atsizvelgiant ar sutampa pateikti userio duomenys
         guard let user = userOptional else {
             return UserResult(user: nil, errorMessage: "No such user with this username")
         }
