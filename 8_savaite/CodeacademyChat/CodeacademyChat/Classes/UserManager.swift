@@ -11,12 +11,14 @@ import Foundation
  */
 struct UserResult {
     let user: User?
+    let errorTitle: String?
     let errorMessage: String?
 }
 
 // vartotoju managinimo klase, kurioje saugomas userListas
 class UserManager {
     var userList: [User] = []
+    
     
 // vartotojo registravimo f- ja. grazina UserResult struct'a
     func register(username: String, password: String, confirmPassword: String) -> UserResult {
@@ -26,16 +28,16 @@ class UserManager {
         guard !username.isEmpty, !password.isEmpty
         // tikrinimo logika: jei kazkas neivesta ar nesutampa - useris nesukuriamas ir isvedamas klaidos pranesimas
         else {
-            return UserResult(user: nil, errorMessage: "Fill username and/or password")
+            return UserResult(user: nil, errorTitle: registerErrorTitle, errorMessage: "Fill username and/or password")
         }
         if password != confirmPassword {
-            return UserResult(user: nil, errorMessage: "Your password didn't match")
+            return UserResult(user: nil, errorTitle: registerErrorTitle, errorMessage: "Your password didn't match")
         }
         
         // pereinama ir patikrinamas userListas
         for user in userList {
             if username == user.username {
-                return UserResult(user: nil, errorMessage: "User with same username already exists")
+                return UserResult(user: nil, errorTitle: registerErrorTitle, errorMessage: "User with same username already exists")
             }
         }
         
@@ -44,7 +46,7 @@ class UserManager {
         
         userList.append(user)
         // perduodama UserResult structui
-        return UserResult(user: user, errorMessage: nil)
+        return UserResult(user: user, errorTitle: registerErrorTitle, errorMessage: nil)
     }
     
 // vartotojo loginimo f-ja kur tikrinama ar toks vartotojas yra ir ar pateikti visi duomenys sutampa
@@ -67,12 +69,14 @@ class UserManager {
 
         // guardas patikrina ir toliau praleidzia (arba ne), atsizvelgiant ar sutampa pateikti userio duomenys
         guard let user = userOptional else {
-            return UserResult(user: nil, errorMessage: "No such user with this username")
+            return UserResult(user: nil, errorTitle: loginErrorTitle, errorMessage: "No such user with this username")
         }
+        
         if user.password != password {
-            return UserResult(user: nil, errorMessage: "Wrong password")
+            return UserResult(user: nil, errorTitle: loginErrorTitle, errorMessage: "Wrong password")
         }
-        return UserResult(user: user, errorMessage: nil)
+        return UserResult(user: user, errorTitle: loginErrorTitle, errorMessage: nil)
     }
+    
 }
 

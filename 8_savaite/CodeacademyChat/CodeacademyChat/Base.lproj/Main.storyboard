@@ -356,6 +356,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Edit"/>
+                                <connections>
+                                    <action selector="passwEditButtonTapped:" destination="lyE-Zn-bWW" eventType="touchUpInside" id="LVb-OR-fHh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NG-6i-SMg">
                                 <rect key="frame" x="20" y="525" width="353" height="50"/>

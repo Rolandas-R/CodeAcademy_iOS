@@ -44,17 +44,17 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func joinChatButtonTap(_ sender: Any) {
+        // patobulintas variantas su showAlert f-ja, kuriai pakanka paduoti title ir message
+        showAlert(title: "Error joining room", message: "Room not found")
+    }
+    
         /* MARK: pirminis variantas su alertu buvo toks:
          let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
          let alertController = UIAlertController(title: "Error joining room", message: "Room not found", preferredStyle: .alert)
          alertController.addAction(alertAction)
          self.present(alertController, animated: true)
          }*/
-        
-        // patobulintas variantas su showAlert f-ja, kuriai pakanka paduoti title ir message
-        showAlert(title: "Error joining room", message: "Room not found")
-    }
-    
+
     @IBAction func createNewChatButtonTap(_ sender: Any) {
         #warning ("TODO: sukurti RoomViewControlleri")
 //        let roomViewController = RoomViewController()
@@ -66,7 +66,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func offlineUsersButtonTap(_ sender: Any) {
-        showAlert(title: "Offline users:")
+        showAlert(title: "Offline users:", message: "")
     }
     
     @IBAction func logoutButtonTap(_ sender: Any) {

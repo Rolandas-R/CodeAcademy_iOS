@@ -28,10 +28,22 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func userEditButtonTapped(_ sender: Any) {
-        let cancelAction = UIAlertAction(title: "cancel", style: .default, handler: nil)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let alertController = UIAlertController(title: "Edit Username", message: "Enter your new username:", preferredStyle: .alert)
+
+        let cancelAction = UIAlertAction(title: "cancel", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        #warning("Kazkodel nesuveikia userio vardo pakeitimas - nepasikeicia usernameTextField.text")
+//        { _ in
+//
+//            let newUserName = alertController.textFields![0] as UITextField
+//            if userNameSettingsTextField.text != newUserName.text {
+//                self.user.username = newUserName.text!
+//                print("OK")
+//            } else {
+//                print("Something went wrong")
+//            }
+//        }
         
-        let alertController = UIAlertController(title: "usernameEditController", message: "Edit user name:", preferredStyle: .alert)
         alertController.addAction(cancelAction)
         alertController.addAction(okAction)
         
@@ -40,12 +52,36 @@ class SettingsViewController: UIViewController {
         }
         
         self.present(alertController, animated: true)
-        
-//        alert.addAction(UIAlertAction(title: "OK", style: .alert, handler: { _ in
-//            let passwordTextField.placeholder = placeholder
-//
-//        }
-        
     }
     
+    @IBAction func passwEditButtonTapped(_ sender: Any) {
+        let alertController = UIAlertController(title: "Edit password", message: "Enter your new password", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            
+            let passwordTextField = alertController.textFields![0] as UITextField
+            let confirmPasswTextField = alertController.textFields![1] as UITextField
+            
+            if passwordTextField.text == confirmPasswTextField.text {
+                self.user.password = passwordTextField.text!
+                print("OK")
+            } else {
+                print("Something went wrong")
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(okAction)
+        
+        alertController.addTextField { textfield in
+            textfield.placeholder = "Password"
+        }
+        
+        alertController.addTextField { textfield in
+            textfield.placeholder = "Confirm password"
+        }
+        
+        self.present(alertController, animated: true)
+    }
 }

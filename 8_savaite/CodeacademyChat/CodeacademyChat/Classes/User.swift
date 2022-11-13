@@ -10,9 +10,9 @@ import Foundation
 
 // User class'e su username, passw ir isOnline parametrais. Pasiekiama ir naudojama is visu VC
 class User {
-    let username: String
-    let password: String
-    let isOnline: Bool
+    var username: String
+    var password: String
+    var isOnline: Bool
     
     // klases inicializavimas
     init(username: String, password: String, isOnline: Bool) {
