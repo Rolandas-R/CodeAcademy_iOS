@@ -20,6 +20,7 @@ class UserManager {
     
 // vartotojo registravimo f- ja. grazina UserResult struct'a
     func register(username: String, password: String, confirmPassword: String) -> UserResult {
+        let registerErrorTitle = "Error while creating user"
         
         // guardas padeda patikrinti ar ivestas slaptazodis ir passwordas i tekstini lauka
         guard !username.isEmpty, !password.isEmpty
@@ -40,6 +41,7 @@ class UserManager {
         
         // jei viskas tvarkoje sukuriamas naujas objektas user ir pridedamas prie userListo
         let user = User(username: username, password: password, isOnline: true)
+        
         userList.append(user)
         // perduodama UserResult structui
         return UserResult(user: user, errorMessage: nil)
@@ -48,7 +50,19 @@ class UserManager {
 // vartotojo loginimo f-ja kur tikrinama ar toks vartotojas yra ir ar pateikti visi duomenys sutampa
 // tikrinimas su closure
     func login(username: String, password: String) -> UserResult {
-        /* antras variantas (CLOSURE) */
+        let loginErrorTitle = "Error while loging in"
+        /*
+         
+         //vienas is variantu su closure:
+         let userOptional = userList.first { user in
+                     user.username == username
+                 }
+         
+         // dar variantas kaip paduodam funkcija vietoj closure:
+        //        let userOptional = userList.first(where: arPetras)
+         
+         
+         //MARK: cia panaudotas antras variantas (CLOSURE) */
         let userOptional = userList.first(where: { $0.username == username })
 
         // guardas patikrina ir toliau praleidzia (arba ne), atsizvelgiant ar sutampa pateikti userio duomenys

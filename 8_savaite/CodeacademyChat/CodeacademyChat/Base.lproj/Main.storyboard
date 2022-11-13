@@ -78,7 +78,7 @@
                                     <action selector="buttonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kpE-PU-BAy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ErrorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djK-h6-RSv">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ErrorLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djK-h6-RSv">
                                 <rect key="frame" x="46" y="663" width="301" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="bg5-2B-qD6"/>
@@ -122,7 +122,6 @@
                     <navigationItem key="navigationItem" id="W3c-c3-Inu"/>
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="Q0S-G5-lCP" id="Dpd-Ex-jR3"/>
-                        <outlet property="errorMessageLabel" destination="djK-h6-RSv" id="CEO-OM-Osv"/>
                         <outlet property="passwordTextField" destination="llC-Zx-O7a" id="rq2-qJ-dK8"/>
                         <outlet property="registerButton" destination="msS-s4-9MA" id="Tcw-as-Bjh"/>
                         <outlet property="segmentControl" destination="qF3-9n-1FJ" id="LhO-4Q-vIv"/>
@@ -179,7 +178,7 @@
                                     <color key="baseBackgroundColor" red="0.0" green="0.65836974439999996" blue="0.63388744679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="joinChatButtonTapped:" destination="xoL-QE-M5I" eventType="touchUpInside" id="S7A-jk-1se"/>
+                                    <action selector="joinChatButtonTap:" destination="xoL-QE-M5I" eventType="touchUpInside" id="ibA-BY-2wE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NB-48-tqX">
@@ -191,6 +190,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Online Users">
                                     <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onlineUsersButtonTap:" destination="xoL-QE-M5I" eventType="touchUpInside" id="Pyg-tW-d2u"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rt-DR-lgF">
                                 <rect key="frame" x="20" y="550" width="353" height="50"/>
@@ -201,6 +203,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Offline Users">
                                     <color key="baseBackgroundColor" red="1" green="2.4919108960186342e-05" blue="0.28742221822407432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="offlineUsersButtonTap:" destination="xoL-QE-M5I" eventType="touchUpInside" id="GCe-yU-xZ2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H67-HX-K0w">
                                 <rect key="frame" x="20" y="620" width="353" height="50"/>
@@ -211,6 +216,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Create New Chat">
                                     <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="createNewChatButtonTap:" destination="xoL-QE-M5I" eventType="touchUpInside" id="nVe-aN-FZ1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74C-TH-rle">
                                 <rect key="frame" x="128" y="690" width="134" height="50"/>
@@ -230,6 +238,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="LOGOUT">
                                     <color key="baseForegroundColor" red="1" green="2.4919108959999999e-05" blue="0.28742221820000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutButtonTap:" destination="xoL-QE-M5I" eventType="touchUpInside" id="eLL-OG-7K4"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7v-gP-N8W">
                                 <rect key="frame" x="20" y="123" width="353" height="22"/>

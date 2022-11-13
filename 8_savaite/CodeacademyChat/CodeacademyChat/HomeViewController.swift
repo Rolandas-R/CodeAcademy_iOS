@@ -43,11 +43,44 @@ class HomeViewController: UIViewController {
         welcomeUserLabel.text = "Welcome, \(user.username)"
     }
     
-    @IBAction func joinChatButtonTapped(_ sender: Any) {
+    @IBAction func joinChatButtonTap(_ sender: Any) {
+        /* MARK: pirminis variantas su alertu buvo toks:
+         let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+         let alertController = UIAlertController(title: "Error joining room", message: "Room not found", preferredStyle: .alert)
+         alertController.addAction(alertAction)
+         self.present(alertController, animated: true)
+         }*/
+        
+        // patobulintas variantas su showAlert f-ja, kuriai pakanka paduoti title ir message
+        showAlert(title: "Error joining room", message: "Room not found")
+    }
+    
+    @IBAction func createNewChatButtonTap(_ sender: Any) {
+        #warning ("TODO: sukurti RoomViewControlleri")
+//        let roomViewController = RoomViewController()
+//        navigationController?.present(roomViewController, animated: true)
+    }
+    
+    @IBAction func onlineUsersButtonTap(_ sender: Any) {
+        showAlert(title: "Online users:", message: "\(user.username)")
+    }
+    
+    @IBAction func offlineUsersButtonTap(_ sender: Any) {
+        showAlert(title: "Offline users:")
+    }
+    
+    @IBAction func logoutButtonTap(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+/* showAlert f-ja kuri leidzia isvengt kodo dubliavimo, kiekvieno buttono paspaudimui, kaip buvo numatyta pirminiame alert variante.
+ */
+    private func showAlert(title: String, message: String = ""){
         let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        let alertController = UIAlertController(title: "Error joining room", message: "Room not found", preferredStyle: .alert)
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(alertAction)
-          self.present(alertController, animated: true)
+        self.present(alertController, animated: true)
     }
     
     
