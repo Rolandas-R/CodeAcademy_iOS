@@ -56,9 +56,8 @@ class HomeViewController: UIViewController {
          }*/
 
     @IBAction func createNewChatButtonTap(_ sender: Any) {
-        #warning ("TODO: sukurti RoomViewControlleri")
-//        let roomViewController = RoomViewController()
-//        navigationController?.present(roomViewController, animated: true)
+        let roomViewController = RoomViewController()
+        navigationController?.present(roomViewController, animated: true)
     }
     
     @IBAction func onlineUsersButtonTap(_ sender: Any) {

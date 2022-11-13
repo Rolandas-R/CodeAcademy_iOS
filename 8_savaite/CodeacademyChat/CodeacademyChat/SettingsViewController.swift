@@ -31,18 +31,14 @@ class SettingsViewController: UIViewController {
         let alertController = UIAlertController(title: "Edit Username", message: "Enter your new username:", preferredStyle: .alert)
 
         let cancelAction = UIAlertAction(title: "cancel", style: .default)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        #warning("Kazkodel nesuveikia userio vardo pakeitimas - nepasikeicia usernameTextField.text")
-//        { _ in
-//
-//            let newUserName = alertController.textFields![0] as UITextField
-//            if userNameSettingsTextField.text != newUserName.text {
-//                self.user.username = newUserName.text!
-//                print("OK")
-//            } else {
-//                print("Something went wrong")
-//            }
-//        }
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+        
+        let usernameTextField = alertController.textFields![0] as UITextField
+            if usernameTextField.text != self.userNameSettingsTextField.text {
+                self.user.username = usernameTextField.text!
+                self.userNameSettingsTextField.text = usernameTextField.text!
+            }
+        }
         
         alertController.addAction(cancelAction)
         alertController.addAction(okAction)
@@ -63,7 +59,6 @@ class SettingsViewController: UIViewController {
             
             if passwordTextField.text == confirmPasswTextField.text {
                 self.user.password = passwordTextField.text!
-                print("OK")
             } else {
                 print("Something went wrong")
             }
