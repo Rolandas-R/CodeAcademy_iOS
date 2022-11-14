@@ -9,6 +9,16 @@ import UIKit
 
 class RoomViewController: UIViewController {
 
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
+    @IBOutlet weak var messageTextView: UITextView!
+    
+    @IBOutlet weak var messageTextField: UITextField!
+    
+    
+    @IBOutlet weak var sendButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
