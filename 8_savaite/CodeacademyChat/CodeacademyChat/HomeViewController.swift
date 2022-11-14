@@ -62,10 +62,12 @@ class HomeViewController: UIViewController {
     
     @IBAction func onlineUsersButtonTap(_ sender: Any) {
         showAlert(title: "Online users:", message: "\(user.username)")
+        print("\(user.username) and \(user.isOnline)")
     }
     
     @IBAction func offlineUsersButtonTap(_ sender: Any) {
         showAlert(title: "Offline users:", message: "")
+//        print("\(user.username) and \(user.isOnline)")
     }
     
     @IBAction func logoutButtonTap(_ sender: Any) {

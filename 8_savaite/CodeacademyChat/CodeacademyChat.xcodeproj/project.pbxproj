@@ -22,6 +22,7 @@
 		922883B6291ACAA900A79E3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922883B4291ACAA900A79E3D /* LaunchScreen.storyboard */; };
 		92565ED9291AD0720037FC13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92565ED8291AD0720037FC13 /* HomeViewController.swift */; };
 		926D06A2291C21BA006B9F81 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D06A1291C21BA006B9F81 /* SettingsViewController.swift */; };
+		929495F32922099300161D33 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929495F22922099300161D33 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		922883B7291ACAA900A79E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92565ED8291AD0720037FC13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		926D06A1291C21BA006B9F81 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		929495F22922099300161D33 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				920FB954291AE86D0026F347 /* Room.swift */,
 				920FB959291AFEB90026F347 /* User.swift */,
 				920FB95B291AFF250026F347 /* UserManager.swift */,
+				929495F22922099300161D33 /* Alert.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -89,8 +92,8 @@
 				920FB958291AFE640026F347 /* Classes */,
 				922883A9291ACA9F00A79E3D /* AppDelegate.swift */,
 				922883AB291ACA9F00A79E3D /* SceneDelegate.swift */,
-				922883AD291ACA9F00A79E3D /* ViewController.swift */,
 				92565ED8291AD0720037FC13 /* HomeViewController.swift */,
+				922883AD291ACA9F00A79E3D /* ViewController.swift */,
 				926D06A1291C21BA006B9F81 /* SettingsViewController.swift */,
 				922883AF291ACA9F00A79E3D /* Main.storyboard */,
 				9211CC6D29215DC300066E81 /* RoomViewController.swift */,
@@ -180,6 +183,7 @@
 				926D06A2291C21BA006B9F81 /* SettingsViewController.swift in Sources */,
 				922883AA291ACA9F00A79E3D /* AppDelegate.swift in Sources */,
 				920FB955291AE86D0026F347 /* Room.swift in Sources */,
+				929495F32922099300161D33 /* Alert.swift in Sources */,
 				9211CC6F29215DC300066E81 /* RoomViewController.swift in Sources */,
 				920FB95A291AFEB90026F347 /* User.swift in Sources */,
 				920FB953291AE71B0026F347 /* Message.swift in Sources */,
