@@ -54,15 +54,12 @@ class UserManager {
     func login(username: String, password: String) -> UserResult {
         let loginErrorTitle = "Error while loging in"
         /*
-         
          //vienas is variantu su closure:
          let userOptional = userList.first { user in
                      user.username == username
                  }
-         
          // dar variantas kaip paduodam funkcija vietoj closure:
         //        let userOptional = userList.first(where: arPetras)
-         
          
          //MARK: cia panaudotas antras variantas (CLOSURE) */
         let userOptional = userList.first(where: { $0.username == username })

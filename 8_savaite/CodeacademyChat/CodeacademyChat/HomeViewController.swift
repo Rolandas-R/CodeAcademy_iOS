@@ -49,17 +49,18 @@ class HomeViewController: UIViewController {
     @IBAction func joinChatButtonTap(_ sender: Any) {
         let roomViewController = RoomViewController()
         let roomResult = roomManager.getRoom(roomName: enterRoomIdTextField.text!)
-//        show(roomViewController, sender: nil)
+        
         if let room = roomResult.room {
             roomViewController.room = room
             show(roomViewController, sender: nil)
-
+            
         } else {
-            print(roomResult.errorMessage)
+            showAlert(title: "Error joining room", message: roomResult.errorMessage ?? "Room not found")
         }
-        // patobulintas variantas su showAlert f-ja, kuriai pakanka paduoti title ir message
-//        showAlert(title: "Error joining room", message: "Room not found")
     }
+
+        // patobulintas variantas su showAlert f-ja, kuriai pakanka paduoti title ir message
+        //        showAlert(title: "Error joining room", message: "Room not found")
     
         /* MARK: pirminis variantas su alertu buvo toks:
          let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -75,15 +76,10 @@ class HomeViewController: UIViewController {
         if let room = roomResult.room {
             roomViewController.room = room
             show(roomViewController, sender: nil)
-            
+/* sitas neveikia nes dubliuojasi su auksciau esanciu kodu: navigationController?.present(roomViewController, animated: true) */
         } else {
-            print(roomResult.errorMessage)
+            showAlert(title: "Error creating room", message: "Room was not created")
         }
-//        navigationController?.present(roomViewController, animated: true)
-
-//        createRoom(roomName: enterRoomIdTextField.text)
-//
-//        navigationController?.present(roomViewController, animated: true)
     }
     
     @IBAction func onlineUsersButtonTap(_ sender: Any) {
@@ -100,7 +96,6 @@ class HomeViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    
 /* showAlert f-ja kuri leidzia isvengt kodo dubliavimo, kiekvieno buttono paspaudimui, kaip buvo numatyta pirminiame alert variante.
  */
     private func showAlert(title: String, message: String = ""){
@@ -110,10 +105,8 @@ class HomeViewController: UIViewController {
         self.present(alertController, animated: true)
     }
     
-    
 /* segas kurio pagalba bus perduodami duomenys ir pereinama toliau i SettingsViewControlleri
  */
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let viewController = segue.destination as? SettingsViewController {
             viewController.user = user

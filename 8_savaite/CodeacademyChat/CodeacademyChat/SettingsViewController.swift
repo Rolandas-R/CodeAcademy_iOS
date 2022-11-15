@@ -24,8 +24,8 @@ class SettingsViewController: UIViewController {
         // navigation controlerio back buttonas bus rodomas kad grizt i pries tai esanti VC
         navigationController?.isNavigationBarHidden = false
         // userio username text fielde perduodama ir atvaizduojama vartotojo username: variantasA:
-//        userNameSettingsTextField.text = user.username
-        // variantas su f-ja:
+        //        userNameSettingsTextField.text = user.username
+        // MARK: variantas su f-ja:
         updateUI()
     }
     
@@ -46,23 +46,20 @@ class SettingsViewController: UIViewController {
             }
         }
             
-// MANO Variantas:
+// MANO Variantas buvo toks:
 //        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-//
 //            let usernameTextField = alertController.textFields![0] as UITextField
-//
 //                if usernameTextField.text != self.userNameSettingsTextField.text {
 //                    guard !usernameTextField.text!.isEmpty else {
 //                        return
 //                    }
 //                    self.user.username = usernameTextField.text!
 //                    self.userNameSettingsTextField.text = usernameTextField.text!
-                    //            }
-                    //            else {
-//                    //                UIAlertController(title: "error", message: "not changed", preferredStyle: .alert)
+//                    } else {
+//            UIAlertController(title: "error", message: "not changed", preferredStyle: .alert)
 //                }
 //            }
-//
+
     
         
         let cancelAction = UIAlertAction(title: "cancel", style: .default)
@@ -91,7 +88,6 @@ class SettingsViewController: UIViewController {
                 self.user.password = passwordTextField.text!
                 print("\(self.user.username) pasword was changed and is \(self.user.password)")
             } else {
-#warning ("TODO: reikia kazka padaryti, greiciausiai dar viena alerta, kad informuoti useri, kas nesutapo passw ir confirmpassw")
                 print("Something went wrong")
             }
         }

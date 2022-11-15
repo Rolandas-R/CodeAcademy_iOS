@@ -128,11 +128,9 @@ teksto laukas. Taip pat switcho pagalba atsizvelgiant i segmenta parenkamas rodo
             break
         }
     } */
-        
-
-
-    /* sita f-ja validateUser() mes galime paleisti pakoreguota koda(switch case .login antras variantas) kur seniau, kai switch case'as buvo .login mums reikejo pakartoti username ir passwordo patikrinimo koda taip pat, kaip ir case .registered (//uzkomentuota switch dalis: pirminis variantas), tai dabar mes tai padarome paprasciau, neperrasinejame kodo, kuris tampa lengviau skaitomu)
-     */
+ 
+    
+    /* sita f-ja validateUser() mes galime paleisti pakoreguota koda(switch case .login antras variantas) kur seniau, kai switch case'as buvo .login mums reikejo pakartoti username ir passwordo patikrinimo koda taip pat, kaip ir case .registered (//uzkomentuota switch dalis: pirminis variantas), tai dabar mes tai padarome paprasciau, neperrasinejame kodo, kuris tampa lengviau skaitomu) */
 
     private func validateUser(from userResult: UserResult) {
         if let errorTitle = userResult.errorTitle,
@@ -146,8 +144,8 @@ teksto laukas. Taip pat switcho pagalba atsizvelgiant i segmenta parenkamas rodo
             }
         }
     
-    /* Klaidos rodymo f-ja. Pirminiame variante buvo naudojamas errorMessageLabel, kuris pakeistas UIAlertAction'u
-     */
+    /* Klaidos rodymo f-ja. Pirminiame variante buvo naudojamas errorMessageLabel, kuris pakeistas UIAlertAction'u */
+
     private func showError(title: String, message: String) {
         let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -155,7 +153,6 @@ teksto laukas. Taip pat switcho pagalba atsizvelgiant i segmenta parenkamas rodo
         self.present(alertController, animated: true)
         }
         
-    
 // segue f-ja. Sujungia ir perduoda useri po loginimo is sio VC i HomeViewControlleri
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
