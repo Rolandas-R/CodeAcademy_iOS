@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Chat Room No.:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6f-G4-uT2">
-                    <rect key="frame" x="20" y="89" width="353" height="50"/>
+                    <rect key="frame" x="20" y="30" width="353" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="8yg-Fk-bW2"/>
                     </constraints>
@@ -34,7 +34,7 @@
                     <size key="shadowOffset" width="0.0" height="0.0"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Your message text will apear here.." borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tp8-al-UkK">
-                    <rect key="frame" x="20" y="639" width="353" height="50"/>
+                    <rect key="frame" x="20" y="580" width="353" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="GnX-Wb-0gq"/>
                     </constraints>
@@ -43,15 +43,18 @@
                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXj-Qw-zgj">
-                    <rect key="frame" x="20" y="709" width="353" height="50"/>
+                    <rect key="frame" x="20" y="650" width="353" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="pR3-5m-AWy"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Send"/>
+                    <connections>
+                        <action selector="sendMessageButton:" destination="-1" eventType="touchUpInside" id="Pq5-3a-tcD"/>
+                    </connections>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4o1-bJ-EOI">
-                    <rect key="frame" x="20" y="159" width="353" height="450"/>
+                    <rect key="frame" x="20" y="100" width="353" height="450"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="450" id="Fgd-rC-5U0"/>

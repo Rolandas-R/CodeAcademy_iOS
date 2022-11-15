@@ -28,4 +28,11 @@ class Room {
 //        self.messageHistory = messageHistory
 
     }
+    func writeMessage(messageContent: String, sender: User) {
+        var messageResult = Message(content: messageContent, date: .now, username: sender.username)
+        message.append(messageResult)
+        
+    }
 }
+
+    

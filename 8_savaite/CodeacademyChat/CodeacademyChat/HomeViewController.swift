@@ -52,10 +52,10 @@ class HomeViewController: UIViewController {
         
         if let room = roomResult.room {
             roomViewController.room = room
+            roomViewController.currentUser = user
             show(roomViewController, sender: nil)
-            
         } else {
-            showAlert(title: "Error joining room", message: roomResult.errorMessage ?? "Room not found")
+            showAlert(title: "Error joining room", message: roomResult.errorMessage ?? "")
         }
     }
 
@@ -75,6 +75,7 @@ class HomeViewController: UIViewController {
         
         if let room = roomResult.room {
             roomViewController.room = room
+            roomViewController.currentUser = user
             show(roomViewController, sender: nil)
 /* sitas neveikia nes dubliuojasi su auksciau esanciu kodu: navigationController?.present(roomViewController, animated: true) */
         } else {

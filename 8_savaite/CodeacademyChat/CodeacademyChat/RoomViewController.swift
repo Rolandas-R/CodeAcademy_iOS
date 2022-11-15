@@ -18,7 +18,7 @@ class RoomViewController: UIViewController {
     @IBOutlet weak var sendButton: UIButton!
     
     var currentUser: User!
-    var room: Room?
+    var room: Room!
     
     
     override func viewDidLoad() {
@@ -34,7 +34,10 @@ class RoomViewController: UIViewController {
         welcomeLabel.text = "Welcome to the room: \(room!.name)"
     }
 
-
+    @IBAction func sendMessageButton(_ sender: Any) {
+        room.writeMessage(messageContent: messageTextField.text!, sender: currentUser)
+    }
+    
     /*
     // MARK: - Navigation
 
