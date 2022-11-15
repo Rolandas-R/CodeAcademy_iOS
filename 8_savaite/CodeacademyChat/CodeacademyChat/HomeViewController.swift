@@ -69,7 +69,7 @@ class HomeViewController: UIViewController {
         } else {
             print(roomResult.errorMessage)
         }
-        navigationController?.present(roomViewController, animated: true)
+//        navigationController?.present(roomViewController, animated: true)
 
 //        createRoom(roomName: enterRoomIdTextField.text)
 //

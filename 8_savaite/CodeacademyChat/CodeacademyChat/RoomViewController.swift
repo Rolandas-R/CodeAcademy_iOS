@@ -29,8 +29,9 @@ class RoomViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//
-//        welcomeLabel.text = "Room: \(currentRoom)"
+        navigationController?.setNavigationBarHidden(false, animated: true)
+
+        welcomeLabel.text = "Welcome to the room: \(room!.name)"
     }
 
 
