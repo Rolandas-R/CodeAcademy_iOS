@@ -15,14 +15,22 @@ class RoomViewController: UIViewController {
     
     @IBOutlet weak var messageTextField: UITextField!
     
-    
     @IBOutlet weak var sendButton: UIButton!
+    
+    var currentUser: User!
+    var room: Room?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//
+//        welcomeLabel.text = "Room: \(currentRoom)"
     }
 
 
