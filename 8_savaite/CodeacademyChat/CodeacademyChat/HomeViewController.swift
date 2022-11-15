@@ -47,8 +47,18 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func joinChatButtonTap(_ sender: Any) {
+        let roomViewController = RoomViewController()
+        let roomResult = roomManager.getRoom(roomName: enterRoomIdTextField.text!)
+//        show(roomViewController, sender: nil)
+        if let room = roomResult.room {
+            roomViewController.room = room
+            show(roomViewController, sender: nil)
+
+        } else {
+            print(roomResult.errorMessage)
+        }
         // patobulintas variantas su showAlert f-ja, kuriai pakanka paduoti title ir message
-        showAlert(title: "Error joining room", message: "Room not found")
+//        showAlert(title: "Error joining room", message: "Room not found")
     }
     
         /* MARK: pirminis variantas su alertu buvo toks:
