@@ -38,6 +38,7 @@ class RoomViewController: UIViewController {
         room.writeMessage(messageContent: messageTextField.text!, sender: currentUser)
     }
     
+    
     /*
     // MARK: - Navigation
 
