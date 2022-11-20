@@ -22,7 +22,6 @@
 		922883B6291ACAA900A79E3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922883B4291ACAA900A79E3D /* LaunchScreen.storyboard */; };
 		92565ED9291AD0720037FC13 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92565ED8291AD0720037FC13 /* HomeViewController.swift */; };
 		926D06A2291C21BA006B9F81 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926D06A1291C21BA006B9F81 /* SettingsViewController.swift */; };
-		929495F32922099300161D33 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929495F22922099300161D33 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,9 +40,9 @@
 		922883B2291ACAA900A79E3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		922883B5291ACAA900A79E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		922883B7291ACAA900A79E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92292C07292A89E300CA6C54 /* MARKS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MARKS.md; sourceTree = "<group>"; };
 		92565ED8291AD0720037FC13 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		926D06A1291C21BA006B9F81 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		929495F22922099300161D33 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +59,9 @@
 		920FB958291AFE640026F347 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				920FB952291AE71B0026F347 /* Message.swift */,
-				920FB956291AE96F0026F347 /* RoomManager.swift */,
-				920FB954291AE86D0026F347 /* Room.swift */,
-				920FB959291AFEB90026F347 /* User.swift */,
-				920FB95B291AFF250026F347 /* UserManager.swift */,
-				929495F22922099300161D33 /* Alert.swift */,
+				92292C06292A88C500CA6C54 /* Message */,
+				92292C05292A88AD00CA6C54 /* User */,
+				92292C04292A889300CA6C54 /* Room */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -89,20 +85,63 @@
 		922883A8291ACA9F00A79E3D /* CodeacademyChat */ = {
 			isa = PBXGroup;
 			children = (
+				92292C03292A879F00CA6C54 /* ViewControllers */,
+				92292C02292A872100CA6C54 /* UI */,
 				920FB958291AFE640026F347 /* Classes */,
 				922883A9291ACA9F00A79E3D /* AppDelegate.swift */,
 				922883AB291ACA9F00A79E3D /* SceneDelegate.swift */,
-				92565ED8291AD0720037FC13 /* HomeViewController.swift */,
-				922883AD291ACA9F00A79E3D /* ViewController.swift */,
-				926D06A1291C21BA006B9F81 /* SettingsViewController.swift */,
-				922883AF291ACA9F00A79E3D /* Main.storyboard */,
-				9211CC6D29215DC300066E81 /* RoomViewController.swift */,
-				9211CC6E29215DC300066E81 /* RoomView.xib */,
 				922883B4291ACAA900A79E3D /* LaunchScreen.storyboard */,
 				922883B7291ACAA900A79E3D /* Info.plist */,
 				922883B2291ACAA900A79E3D /* Assets.xcassets */,
+				92292C07292A89E300CA6C54 /* MARKS.md */,
 			);
 			path = CodeacademyChat;
+			sourceTree = "<group>";
+		};
+		92292C02292A872100CA6C54 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9211CC6E29215DC300066E81 /* RoomView.xib */,
+				922883AF291ACA9F00A79E3D /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		92292C03292A879F00CA6C54 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				92565ED8291AD0720037FC13 /* HomeViewController.swift */,
+				922883AD291ACA9F00A79E3D /* ViewController.swift */,
+				926D06A1291C21BA006B9F81 /* SettingsViewController.swift */,
+				9211CC6D29215DC300066E81 /* RoomViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		92292C04292A889300CA6C54 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				920FB954291AE86D0026F347 /* Room.swift */,
+				920FB956291AE96F0026F347 /* RoomManager.swift */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		92292C05292A88AD00CA6C54 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				920FB95B291AFF250026F347 /* UserManager.swift */,
+				920FB959291AFEB90026F347 /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		92292C06292A88C500CA6C54 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				920FB952291AE71B0026F347 /* Message.swift */,
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,7 +222,6 @@
 				926D06A2291C21BA006B9F81 /* SettingsViewController.swift in Sources */,
 				922883AA291ACA9F00A79E3D /* AppDelegate.swift in Sources */,
 				920FB955291AE86D0026F347 /* Room.swift in Sources */,
-				929495F32922099300161D33 /* Alert.swift in Sources */,
 				9211CC6F29215DC300066E81 /* RoomViewController.swift in Sources */,
 				920FB95A291AFEB90026F347 /* User.swift in Sources */,
 				920FB953291AE71B0026F347 /* Message.swift in Sources */,
